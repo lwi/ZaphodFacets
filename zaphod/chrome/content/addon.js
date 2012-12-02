@@ -104,7 +104,7 @@
     req.overrideMimeType("application/javascript");
     req.open('GET', url, false);
     req.send(null);
-    if (req.status !== 200) {
+    if (req.status !== 200 && req.status != 0) {
       throw new Error("Error loading " + url);
     }
     return req.responseText;
