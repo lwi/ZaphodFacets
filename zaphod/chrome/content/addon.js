@@ -101,6 +101,7 @@
     if (url.indexOf('://') === -1) {
       url = baseUrl + '/' + url;
     }
+    req.overrideMimeType("application/javascript");
     req.open('GET', url, false);
     req.send(null);
     if (req.status !== 200) {
